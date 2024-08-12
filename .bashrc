@@ -120,4 +120,6 @@ alias cdw="cd ~/the-missing-semeter/"
 alias ll="ls -lah"
 alias clc=clear
 alias cdu="cd .."
+alias gitsm="git switch main"
+alias gitstau="git status"
 
