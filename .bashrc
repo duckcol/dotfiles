@@ -123,3 +123,4 @@ alias cdu="cd .."
 alias gitsm="git switch main"
 alias gitstau="git status"
 alias sshfl="ssh 'vm'" #the ssh fast log to vm
+alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info"
