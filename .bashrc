@@ -122,4 +122,4 @@ alias clc=clear
 alias cdu="cd .."
 alias gitsm="git switch main"
 alias gitstau="git status"
-alias sshfg="ssh 'coladuck@10.101.18.66'" #the ssh fast log to vm
+alias sshfg="ssh 'vm'" #the ssh fast log to vm
