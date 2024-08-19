@@ -62,7 +62,8 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-
+set cindent
+set shiftwidth=2 " 表示每一级缩进的长度
 set softtabstop=2 " 使得按退格键时可以一次删掉 2 个空格
 set tabstop=2 " 设定 tab 长度为 2
 set number " 显示行数
@@ -74,12 +75,18 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-inoremap <Up> :echoe "Use k"<CR>
-inoremap <Down> :echoe "Use j"<CR>
-inoremap <Left> :echoe "Use h"<CR>
-inoremap <Right> :echoe "Use l"<CR>
 
 
 " vim插件CtlrP的设置
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" NERDTree shortcut
+map <C-n> :NERDTreeToggle<CR>
+" vim-plug 管理的插件
+call plug#begin()
+
+" List your plugins here
+Plug 'preservim/nerdtree'
+
+call plug#end()

@@ -124,3 +124,12 @@ alias gitsm="git switch main"
 alias gitst="git status"
 alias sshfl="ssh 'vm'" #the ssh fast log to vm
 alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info"
+export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
+export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
+
+# fzf configuation in bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
+# this is a comment.
