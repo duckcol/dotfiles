@@ -83,6 +83,8 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " NERDTree shortcut
 map <C-n> :NERDTreeToggle<CR>
+
+
 " vim-plug 管理的插件
 call plug#begin()
 
