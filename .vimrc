@@ -63,9 +63,9 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 set cindent
-set shiftwidth=2 " 表示每一级缩进的长度
-set softtabstop=2 " 使得按退格键时可以一次删掉 2 个空格
-set tabstop=2 " 设定 tab 长度为 2
+set shiftwidth=4 " 表示每一级缩进的长度
+set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
+set tabstop=4 " 设定 tab 长度为 4
 set number " 显示行数
 set relativenumber " 光标所在行数为真实行数，其余的为相对与这行的行数，方便跳转
 set laststatus=2 "一直显示底部状态栏 
