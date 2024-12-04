@@ -123,7 +123,11 @@ alias cdu="cd .."
 alias gitsm="git switch main"
 alias gitst="git status"
 alias sshfl="ssh 'vm'" #the ssh fast log to vm
-alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info"
+alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info
+alias verilator=$VERILATOR_ROOT/bin/verilator	#I install verilator in the git file so I have to run it from the file
+export VERILATOR_ROOT=/home/coladuck/verilator	#the position of verilator git file
+export PATH=$VERILATOR_ROOT/bin:$PATH	#needed if run verilator out of intallation file
+export VERILATOR_AUTHOR_SITE=1
 export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
 export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
 
@@ -133,3 +137,4 @@ export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
 eval "$(fzf --bash)"
 
 # this is a comment.
+export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard

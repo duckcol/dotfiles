@@ -62,6 +62,9 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+set clipboard=unnamed " 将无名寄存器与系统剪切版关联
+vnoremap Y "+y
+
 set cindent
 set shiftwidth=4 " 表示每一级缩进的长度
 set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
@@ -90,5 +93,6 @@ call plug#begin()
 
 " List your plugins here
 Plug 'preservim/nerdtree'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
