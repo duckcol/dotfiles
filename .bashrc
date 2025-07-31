@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -130,11 +130,32 @@ export PATH=$VERILATOR_ROOT/bin:$PATH	#needed if run verilator out of intallatio
 export VERILATOR_AUTHOR_SITE=1
 export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
 export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
+export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
+
+#	set to use ccache
+#export USE_CCACHE=1
+#export CCACHE_DIR="/home/coladuck/.ccache"
+#export CC="ccache gcc"
+#export CXX="ccache g++"
+#export PATH="/usr/lib/ccache:$PATH"
+
+# alias for tmux
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias ta="tmux attach-session"
 
 # fzf configuation in bash
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-# this is a comment.
-export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
+# some alias for lazy type
+# lazy typr for 'make run' in nemu
+function mr() { 
+	if [[ "$PWD" == "/home/coladuck/ysyx-workbench/nemu"* ]]; then 
+		make run
+	else
+		echo "error: plz switch path to ~/ysyx-workbench/nemu and then run make run(mr)" >&2 
+		return 1
+	fi
+}

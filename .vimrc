@@ -94,5 +94,20 @@ call plug#begin()
 " List your plugins here
 Plug 'preservim/nerdtree'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
+
+" coc.nvim 设置
+" some key-binding
+"
+" use <cr> to complete code, which could be done by <C-y>
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" To make <cr> select the first completion item and confirm the completion when no item has been selected
+inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+" GoTo code navigation
+nmap <silent><nowait> gd <Plug>(coc-definition)
+"nmap <silent><nowait> gy <Plug>(coc-type-definition)
+"nmap <silent><nowait> gi <Plug>(coc-implementation)
+"nmap <silent><nowait> gr <Plug>(coc-references)
+"	end of coc.nvim keybinding
