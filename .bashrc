@@ -116,8 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias cdw="cd ~/the-missing-semeter/"
-alias ll="ls -lah"
+#	some alias for lazy type in general
+alias ll="ls -ah -ltu"
 alias clc=clear
 alias cdu="cd .."
 alias gitsm="git switch main"
