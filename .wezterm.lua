@@ -85,5 +85,11 @@ config.window_background_opacity = 0.80
 				})
 			end
 
+	-- some explanation about copy mode:
+		-- when I want to config the keys for copy mode, 
+		-- as I surf the origin keys, I found it better than tmux,
+		-- so I just decided to use what is original.
+		-- check out https://wezterm.org/copymode.html for details
+
 -- Finally, return the configuration to wezterm:
 return config
