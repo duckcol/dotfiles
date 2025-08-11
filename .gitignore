@@ -4,3 +4,4 @@ secret
 *.swp
 .vim
 .oh-my-zsh
+.p10k.zsh

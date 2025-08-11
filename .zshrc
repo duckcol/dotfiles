@@ -112,3 +112,41 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# some command migrated from bash
+#	some alias for lazy type in general
+alias ll="ls -ah -ltu"
+alias clc=clear
+alias cdu="cd .."
+alias gitsm="git switch main"
+alias sshfl="ssh 'vm'" #the ssh fast log to vm
+alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info
+alias verilator=$VERILATOR_ROOT/bin/verilator	#I install verilator in the git file so I have to run it from the file
+export VERILATOR_ROOT=/home/coladuck/verilator	#the position of verilator git file
+export PATH=$VERILATOR_ROOT/bin:$PATH	#needed if run verilator out of intallation file
+export VERILATOR_AUTHOR_SITE=1
+export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
+export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
+export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
+
+#	set to use ccache
+#export USE_CCACHE=1
+#export CCACHE_DIR="/home/coladuck/.ccache"
+#export CC="ccache gcc"
+#export CXX="ccache g++"
+#export PATH="/usr/lib/ccache:$PATH"
+
+# alias for tmux
+alias tn="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias ta="tmux attach-session"
+
+# lazy type for 'make run' in nemu
+function mr() { 
+	if [[ "$PWD" == "/home/coladuck/ysyx-workbench/nemu"* ]]; then 
+		make run
+	else
+		echo "error: plz switch path to ~/ysyx-workbench/nemu and then run make run(mr)" >&2 
+		return 1
+	fi
+}
