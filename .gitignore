@@ -2,3 +2,5 @@ a.log
 *.log
 secret
 *.swp
+.vim
+.oh-my-zsh
