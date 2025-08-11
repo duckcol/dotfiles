@@ -95,6 +95,9 @@ config.window_padding = {
 				-- so I just decided to use what is original.
 				-- check out https://wezterm.org/copymode.html for details
 			{ key = "C", mods = "CTRL|SHIFT", action = wezterm.action.ActivateCopyMode },
+			
+			-- toggle full screen
+			{ key = "F11", mods = "NONE", action = wezterm.action.ToggleFullScreen },
 		}
 
 			-- tabs create and jump with numbers
