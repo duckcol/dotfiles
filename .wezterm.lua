@@ -18,18 +18,31 @@ config.color_scheme = 'Bamboo Multiplex'
 config.scrollback_lines = 1500
 config.enable_scroll_bar = true
 
--- tab bar setting
+-- tab bar and title bar setting
 	-- apperence and color
+		config.window_frame = {
+			-- The overall background color of the tab bar when
+			-- the window is focused
+			active_titlebar_bg = '#2C2C2C',
 
+			-- The overall background color of the tab bar when
+			-- the window is not focused
+			inactive_titlebar_bg = '#333333',
+		}
 	-- to be done
 
 	-- bahavior
-	config.tab_bar_at_bottom = true
-	config.hide_tab_bar_if_only_one_tab = false
+	config.hide_tab_bar_if_only_one_tab = true
 	enable_scroll_bar = true
 
 -- window setting
-config.window_background_opacity = 0.80
+config.window_background_opacity = 0.85
+config.window_padding = { 
+	left = 5,
+	right = 10,
+	top = 5,
+	bottom = 3,
+}
 
 -- tabs and panes management with keys
 	-- set leader key(or prefix key in Tmux)
@@ -74,6 +87,14 @@ config.window_background_opacity = 0.80
 			-- scroll tabs control
 			{ key = 'PageUp', mods = 'SHIFT', action = wezterm.action.ScrollByPage(-0.3) },
 		  { key = 'PageDown', mods = 'SHIFT', action = wezterm.action.ScrollByPage(0.3) },
+
+			-- enter copymode
+				-- some explanation about copy mode:
+				-- when I want to config the keys for copy mode, 
+				-- as I surf the origin keys, I found it better than tmux,
+				-- so I just decided to use what is original.
+				-- check out https://wezterm.org/copymode.html for details
+			{ key = "C", mods = "CTRL|SHIFT", action = wezterm.action.ActivateCopyMode },
 		}
 
 			-- tabs create and jump with numbers
@@ -84,12 +105,6 @@ config.window_background_opacity = 0.80
 					action=wezterm.action.ActivateTab(i-1),
 				})
 			end
-
-	-- some explanation about copy mode:
-		-- when I want to config the keys for copy mode, 
-		-- as I surf the origin keys, I found it better than tmux,
-		-- so I just decided to use what is original.
-		-- check out https://wezterm.org/copymode.html for details
 
 -- Finally, return the configuration to wezterm:
 return config
