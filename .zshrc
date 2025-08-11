@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git z web-search zsh-autosuggestions fast-syntax-highlighting sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -150,3 +150,8 @@ function mr() {
 		return 1
 	fi
 }
+
+# fzf configuration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# it comes with some very convinient key binding 
+# which to be found by me
