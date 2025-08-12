@@ -7,8 +7,8 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices.
 
 -- the initial geometry for new windows:
-config.initial_cols = 80
-config.initial_rows = 24
+config.initial_cols = 120
+config.initial_rows = 40
 
 -- font and color scheme.
 config.font_size = 12
@@ -20,17 +20,16 @@ config.enable_scroll_bar = true
 
 -- tab bar and title bar setting
 	-- apperence and color
-		config.window_frame = {
-			-- The overall background color of the tab bar when
-			-- the window is focused
-			active_titlebar_bg = '#2C2C2C',
+	config.window_frame = {
+		-- The overall background color of the tab bar when
+		-- the window is focused
+		active_titlebar_bg = '#2C2C2C',
 
-			-- The overall background color of the tab bar when
-			-- the window is not focused
-			inactive_titlebar_bg = '#333333',
-		}
-	-- to be done
-
+		-- The overall background color of the tab bar when
+		-- the window is not focused
+		inactive_titlebar_bg = '#333333',
+	}
+	
 	-- bahavior
 	config.hide_tab_bar_if_only_one_tab = true
 	enable_scroll_bar = true
