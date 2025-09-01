@@ -129,6 +129,8 @@ export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
 export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
 export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
 
+alias fd=fdfind
+
 #	set to use ccache
 #export USE_CCACHE=1
 #export CCACHE_DIR="/home/coladuck/.ccache"
