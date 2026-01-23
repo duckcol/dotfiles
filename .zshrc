@@ -121,13 +121,17 @@ alias cdu="cd .."
 alias gitsm="git switch main"
 alias sshfl="ssh 'vm'" #the ssh fast log to vm
 alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info
-alias verilator=$VERILATOR_ROOT/bin/verilator	#I install verilator in the git file so I have to run it from the file
+
 export VERILATOR_ROOT=/home/coladuck/verilator	#the position of verilator git file
+alias verilator=$VERILATOR_ROOT/bin/verilator	#I install verilator in the git file so I have to run it from the file
 export PATH=$VERILATOR_ROOT/bin:$PATH	#needed if run verilator out of intallation file
 export VERILATOR_AUTHOR_SITE=1
+export YSYX_HOME=/home/coladuck/ysyx-workbench
 export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
 export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
 export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
+
+alias pyok="python3 ok --local"
 
 alias fd=fdfind
 
@@ -157,3 +161,6 @@ function mr() {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # it comes with some very convinient key binding 
 # which to be found by me
+
+# hexo commands:
+export PATH=/home/coladuck/node_modules/hexo/bin:$PATH
