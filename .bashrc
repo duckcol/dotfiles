@@ -145,6 +145,8 @@ alias tl="tmux list-sessions"
 alias ta="tmux attach-session"
 
 # fzf configuation in bash
+# press Ctrl+T to find files
+# press Ctrl+R to find commands in history
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
