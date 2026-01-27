@@ -1,0 +1,57 @@
+[general]
+live_config_reload = true
+# 主题，三个选一个
+import = ["~/.config/alacritty/themes/tokyo_night_storm.toml"]
+#import = ["~/.config/alacritty/themes/tokyo_night.toml"]
+#import = ["~/.config/alacritty/themes/tokyo_night_enhanced.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+#窗口大小
+dimensions = { columns = 80, lines = 24 }
+#窗口边框
+padding = { x = 20, y = 10 }
+#鼠标调整窗口大小
+dynamic_padding = true
+# 透明度（0.0 ~ 1.0）
+opacity = 0.8
+
+# 启用滚动条（Alacritty 0.13+ 支持）
+[scrolling]
+history = 4000
+
+# 字体
+[font]
+size = 12.0
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[keyboard]
+bindings = [    
+    # 查找（Ctrl + F）
+    { key = "F", mods = "Control", action = "SearchForward" },
+
+    # 新建窗口 (Ctrl + N)
+    { key = "N", mods = "Control", action = "CreateNewWindow" },
+
+    # 缩小字体 (Ctrl + -)
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+
+    # 放大字体 (Ctrl + =)
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+
+    # 恢复默认字体大小 (Ctrl + 0)
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+]
