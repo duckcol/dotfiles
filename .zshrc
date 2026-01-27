@@ -163,4 +163,6 @@ function mr() {
 # which to be found by me
 
 # hexo commands:
-export PATH=/home/coladuck/node_modules/hexo/bin:$PATH
+# export PATH=/home/coladuck/node_modules/hexo/bin:$PATH
+# lazygit PATH:
+export PATH="$HOME/.local/bin:$PATH"

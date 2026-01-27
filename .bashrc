@@ -161,3 +161,6 @@ function mr() {
 		return 1
 	fi
 }
+
+# lazygit PATH:
+export PATH="$HOME/.local/bin:$PATH"
