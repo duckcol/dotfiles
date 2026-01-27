@@ -159,10 +159,14 @@ function mr() {
 
 # fzf configuration
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# it comes with some very convinient key binding 
-# which to be found by me
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+# CTRL-T - Paste the selected files and directories onto the command-line
+# CTRL-R - Paste the selected command from history onto the command-line
+# ALT-C - cd into the selected directory
 
 # hexo commands:
 # export PATH=/home/coladuck/node_modules/hexo/bin:$PATH
 # lazygit PATH:
 export PATH="$HOME/.local/bin:$PATH"
+
