@@ -44,7 +44,8 @@ bindings = [
     { key = "F", mods = "Control", action = "SearchForward" },
 
     # 新建窗口 (Ctrl + N)
-    { key = "N", mods = "Control", action = "CreateNewWindow" },
+    # { key = "N", mods = "Control", action = "CreateNewWindow" },
+    # confilct with lazyvim
 
     # 缩小字体 (Ctrl + -)
     { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
