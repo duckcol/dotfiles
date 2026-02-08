@@ -12,7 +12,7 @@ TERM = "xterm-256color"
 #窗口大小
 dimensions = { columns = 80, lines = 24 }
 #窗口边框
-padding = { x = 20, y = 10 }
+padding = { x = 3, y = 0 }
 #鼠标调整窗口大小
 dynamic_padding = true
 # 透明度（0.0 ~ 1.0）
@@ -39,20 +39,20 @@ family = "JetBrainsMono Nerd Font"
 style = "Medium"
 
 [keyboard]
-bindings = [    
-    # 查找（Ctrl + F）
-    { key = "F", mods = "Control", action = "SearchForward" },
+bindings = [
+  # 查找（Ctrl + F）
+  { key = "F", mods = "Control", action = "SearchForward" },
 
-    # 新建窗口 (Ctrl + N)
-    # { key = "N", mods = "Control", action = "CreateNewWindow" },
-    # confilct with lazyvim
+  # 新建窗口 (Ctrl + N)
+  # { key = "N", mods = "Control", action = "CreateNewWindow" },
+  # confilct with lazyvim
 
-    # 缩小字体 (Ctrl + -)
-    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  # 缩小字体 (Ctrl + -)
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
 
-    # 放大字体 (Ctrl + =)
-    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  # 放大字体 (Ctrl + =)
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
 
-    # 恢复默认字体大小 (Ctrl + 0)
-    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+  # 恢复默认字体大小 (Ctrl + 0)
+  { key = "Key0", mods = "Control", action = "ResetFontSize" },
 ]
