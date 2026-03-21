@@ -122,20 +122,30 @@ alias gitsm="git switch main"
 alias sshfl="ssh 'vm'" #the ssh fast log to vm
 alias gitgoodlog="git log --all --graph --decorate --oneline" #visualized log with fine info
 
-export VERILATOR_ROOT=/home/coladuck/verilator	#the position of verilator git file
+# the export sequence must be 
+# YOSYS_HOME first
+# VERILATOR_ROOT second, 
+# because verilator is also in the oss-cad-suite
+# so I need to cover it with my own one
+export YOSYS_HOME=$HOME/oss-cad-suite/bin/
+export PATH=$YOSYS_HOME:$PATH
+export YOSYS_STA_HOME=$HOME/yosys-sta/
+
+export VERILATOR_ROOT=$HOME/verilator	#the position of verilator git file
 alias verilator=$VERILATOR_ROOT/bin/verilator	#I install verilator in the git file so I have to run it from the file
 export PATH=$VERILATOR_ROOT/bin:$PATH	#needed if run verilator out of intallation file
 export VERILATOR_AUTHOR_SITE=1
-export YSYX_HOME=/home/coladuck/ysyx-workbench
-export NEMU_HOME=/home/coladuck/ysyx-workbench/nemu
-export AM_HOME=/home/coladuck/ysyx-workbench/abstract-machine
-export NVBOARD_HOME=/home/coladuck/ysyx-workbench/nvboard
+
+export YSYX_HOME=$HOME/ysyx-workbench
+export NEMU_HOME=$HOME/ysyx-workbench/nemu
+export AM_HOME=$HOME/ysyx-workbench/abstract-machine
+export NVBOARD_HOME=$HOME/ysyx-workbench/nvboard
 
 alias pyok="python3 ok --local"
 
 alias fd=fdfind
 
-#	set to use ccache
+#set to use ccache
 #export USE_CCACHE=1
 #export CCACHE_DIR="/home/coladuck/.ccache"
 #export CC="ccache gcc"
