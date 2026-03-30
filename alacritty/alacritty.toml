@@ -55,4 +55,6 @@ bindings = [
 
   # 恢复默认字体大小 (Ctrl + 0)
   { key = "Key0", mods = "Control", action = "ResetFontSize" },
+
+  { key = "F11", action = "ToggleFullscreen" },
 ]
